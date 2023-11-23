@@ -80,8 +80,12 @@ const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 function averageNumbers(array) {
   if(array.length === 0) {
     return null;
+  } 
+  let sum = 0; 
+  for(let i = 0; i < array.length; i++) {
+    sum+= array[i];
   }
-
+  return sum/array.length
 }
 averageNumbers(numbersAvg)
 
@@ -101,10 +105,19 @@ function averageWordLength(arr) {
   }
 
 }
+
 averageWordLength(arr);
 
 // Bonus - Iteration #4.1
-function avg() {}
+function avg(arr) {
+  if(arr.length === 0) {
+    return null;
+  }
+  
+}
+
+
+
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -121,7 +134,25 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(array) {
+  if(array.length === 0) {
+    return null;
+  }
+  let uniquifyArray = [];
+
+  for(let i = 0; i < array.length; i++) {
+    if(uniquifyArray.indexOf(array[i]) === -1) {
+      uniquifyArray.push(array[i])
+    }
+  }
+
+  return uniquifyArray;
+
+
+
+}
+
+uniquifyArray(wordsUnique)
 
 
 
