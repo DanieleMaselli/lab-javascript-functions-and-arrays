@@ -1,24 +1,75 @@
-// Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+const { ReverseSubtractEquation } = require("three");
 
+// Iteration #1: Find the maximum
+function maxOfTwoNumbers(num1,num2) {
+  if (num1 > num2) {
+    return num1;
+  } else {
+    return num2;
+  }
+}
+
+maxOfTwoNumbers(2,5);
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+
+
+function findLongestWord(array) {
+    
+    if (array.length === 0) {
+      return null;
+    } 
+    //creating a copy of the array
+    let longestWord = Math.max(...array.map(function (word) {
+      return word.length;
+      
+    }));
+    
+    array.forEach(function(word){
+      if(word.length >= longestWord) {
+         longestWord = word;
+      }
+    })
+
+    return longestWord;
+    
+   
+} 
+
+findLongestWord(words);
+
+
+
 
 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(numbers) {
+
+  let sum = 0;
+
+  for(let i = 0; i < numbers.length; i++) {
+    sum+=numbers[i];
+  }
+  return sum;
+  
+}
+
+sumNumbers(numbers);
+
+
 
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum() {
+
+}
 
 
 
@@ -26,13 +77,31 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(array) {
+  if(array.length === 0) {
+    return null;
+  }
+
+}
+averageNumbers(numbersAvg)
 
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(arr) { 
+  if(arr.length === 0) {
+    return null;
+  } else if (arr.length > 0) {
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++) {
+      sum += arr[i].length;
+    }
+    return sum/arr.length;
+  }
+
+}
+averageWordLength(arr);
 
 // Bonus - Iteration #4.1
 function avg() {}
@@ -78,7 +147,20 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(arr) {
+  if (arr.length === 0) {
+    return 0;
+  } 
+
+  arr.forEach(function(word){
+    if (typeof word === arr.length) {
+      return
+    }
+
+  })
+
+}
+howManyTimes(wordsCount)
 
 
 
